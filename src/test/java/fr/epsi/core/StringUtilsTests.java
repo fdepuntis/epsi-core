@@ -1,5 +1,6 @@
 package fr.epsi.core;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
@@ -31,17 +32,18 @@ class StringUtilsTests {
 
 	}
 
-	@ParameterizedTest(name = "{0} ")
-	@CsvFileSource(resources = "/cesar.csv")
+	@ParameterizedTest(name = "{0} encodee :{1}  ")
+	@CsvFileSource(resources = "/cesar.csv", numLinesToSkip = 1)
 
-	void cesarEncode(String sentence, int step) {
+	void cesarEncode(String sentence, String request, int step) {
+		assertEquals(request, StringUtils.cesarEncode(sentence, step));
 
 	}
 
-	@ParameterizedTest(name = "{0} ")
-	@CsvFileSource(resources = "/cesar.csv")
+	@ParameterizedTest(name = "{1} decodee donne :{0}  ")
+	@CsvFileSource(resources = "/cesar.csv", numLinesToSkip = 1)
 
-	void cesarDecode(String sentence, int step) {
-
+	void cesarDecode(String sentence, String request, int step) {
+		assertEquals(sentence, StringUtils.cesarDecode(request, step));
 	}
 }

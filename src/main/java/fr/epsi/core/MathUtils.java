@@ -1,7 +1,7 @@
 package fr.epsi.core;
 
 public final class MathUtils {
-    private MathUtils() {
+    private MathUtils() { 
     }
 
 

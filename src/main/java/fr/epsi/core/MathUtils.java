@@ -17,7 +17,7 @@ public final class MathUtils {
         }
 
         return n * factorial(n - 1);
-        system.out.println("toto"); 
+   
     }
 
     /**

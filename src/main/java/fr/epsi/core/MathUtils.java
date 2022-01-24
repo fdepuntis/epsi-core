@@ -6,7 +6,7 @@ public final class MathUtils {
 
 
     /**
-     * Calculates the factorial of the number n recursively. Ajout du texte
+     * Calculates the factorial of the number n recursively. Ajout du texte essai
      *
      * @param n the number n.
      * @return the factorial.
